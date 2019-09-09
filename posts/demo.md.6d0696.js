@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{401:function(e,t){e.exports={content:["article",["p","Content"]],meta:{title:"Title",publishDate:"2011-11-11T00:00:00.000Z",filename:"posts/demo.md"}}}}]);
