@@ -1,4 +1,4 @@
-# simple react boilerplate
+# some-lib-study
 
 ## Usage
 
