@@ -27,7 +27,7 @@ if(program.init){
 
   // 从demo1目录中读取除node_modules目录下的所有文件并筛选处理
   vfs.src(['**/*', '!node_modules/**/*'], {cwd: cwd, dot: true})
-  pipe(through.obj(function(file, enc, callback){
+  .pipe(through.obj(function(file, enc, callback){
     if(!file.stat.isFile()) {
       return callback();
     }
