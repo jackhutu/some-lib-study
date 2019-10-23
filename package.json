@@ -7,7 +7,7 @@
   },
   "bin": {
     "first": "./bin/first-commander.js",
-    "initP": "./bin/init-project"
+    "initP": "./bin/init-project.js"
   },
   "dependencies": {
     "chalk": "^2.4.2",
