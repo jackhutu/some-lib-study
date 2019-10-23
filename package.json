@@ -1,13 +1,25 @@
 {
   "private": true,
+  "name": "commander-cli",
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack --mode production"
   },
+  "bin": {
+    "first": "./bin/first-commander.js",
+    "initP": "./bin/init-project"
+  },
   "dependencies": {
+    "chalk": "^2.4.2",
+    "commander": "^3.0.2",
+    "fs-extra": "^8.1.0",
+    "path": "^0.12.7",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-router-dom": "^5.0.1"
+    "react-router-dom": "^5.0.1",
+    "through2": "^3.0.1",
+    "vinyl-fs": "^3.0.3",
+    "which": "^2.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
