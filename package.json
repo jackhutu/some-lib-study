@@ -2,9 +2,11 @@
   "private": true,
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "build-lib": "father build"
   },
   "dependencies": {
+    "father": "^2.24.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.0.1"
