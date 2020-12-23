@@ -2,6 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter, Switch, Route } from 'react-router-dom';
 
+System.import('./demo.js').then((res)=>{
+  const demo = res.default
+  console.log(demo())
+})
+
 function App() {
   return (
     <div>
