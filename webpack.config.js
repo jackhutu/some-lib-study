@@ -23,7 +23,7 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      'import-html-entry': path.join(__dirname, './import-html-entry/src')
+      'import-html-entry': path.join(__dirname, './import-html-entry-source/src')
     }    
   },
   devServer:{
