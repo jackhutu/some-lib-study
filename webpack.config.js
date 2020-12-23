@@ -1,6 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path')
 
 module.exports = {
+  devtool: 'cheap-module-source-map',
   module: {
     rules: [
       {
@@ -19,4 +21,12 @@ module.exports = {
       template: 'src/index.html',
     }),
   ],
+  resolve: {
+    alias: {
+      'import-html-entry': path.join(__dirname, './import-html-entry/src')
+    }    
+  },
+  devServer:{
+    contentBase: [path.join(__dirname, './src')],
+  }
 }

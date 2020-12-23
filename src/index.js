@@ -1,6 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { HashRouter, Switch, Route } from 'react-router-dom';
+import React from "react";
+import ReactDOM from "react-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
+
+import importHTML from "import-html-entry";
+
+
+importHTML("./demo.html").then((res) => {
+  var shadow = document.querySelector('#subApp').attachShadow({mode: 'open'});
+  shadow.innerHTML = res.template
+
+  // var subAppContainer = document.createElement('div')
+  // subAppContainer.innerHTML = res.template
+  // document.getElementById('subApp').appendChild(subAppContainer)
+  console.log(res.template);
+
+  res.execScripts().then((exports) => {
+    const mobx = exports;
+    const { observable } = mobx;
+    observable({
+      name: "kuitos",
+    });
+  });
+});
 
 function App() {
   return (
@@ -13,7 +34,7 @@ function App() {
 
 function Routes() {
   function HomePage() {
-    return <div>Home Page</div>
+    return <div className="app">Home Page</div>;
   }
 
   return (
@@ -25,4 +46,4 @@ function Routes() {
   );
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));
