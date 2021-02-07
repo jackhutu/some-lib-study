@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter, Switch, Route } from 'react-router-dom';
-
-System.import('./demo.js').then((res)=>{
-  const demo = res.default
-  console.log(demo())
-})
+// SystemJS.config({ transpiler: 'transpiler-module' })
+SystemJS.import('http://127.0.0.1:8081/Level1-1-subApp-1.js')
+// .then((res)=>{
+//   // const demo = res.default
+//   console.log(res)
+// })
 
 function App() {
   return (

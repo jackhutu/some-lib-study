@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path')
 
 module.exports = {
+  devtool: 'source-map',
   module: {
     rules: [
       {
@@ -20,7 +21,16 @@ module.exports = {
       template: 'src/index.html',
     }),
   ],
-  devServer:{
+  devServer: {
     contentBase: [path.join(__dirname, './src')],
-  }
+
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
+      'Access-Control-Allow-Headers': 'X-Requested-With, content-type, Authorization'
+    },
+    historyApiFallback: true,
+    overlay: { warnings: false, errors: true },
+  },
+  
 }
