@@ -17,7 +17,7 @@ const varLibraryTarget = {
   library: 'outputDemoApp',
   libraryTarget: 'var',  // 可选的值为：var、this、window、global、commonjs、commonjs2、amd、amd-require、umd等。
   // https://twindy.org/webpackda-bao-umdde-exportwen-ti/
-  libraryExport: 'default', // 默认为_entry_return_ 
+  // libraryExport: 'default', // 默认为_entry_return_ 
 }
 
 // this, window, global都类似
