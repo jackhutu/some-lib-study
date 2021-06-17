@@ -1,4 +1,4 @@
-__webpack_public_path__ = 'http://localhost:9000/';
+__webpack_public_path__ = 'http://localhost:9000/';  // 动态设置项目中的所有资源指定一个基础路径
 import React, { useRef, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
