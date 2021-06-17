@@ -3,7 +3,8 @@
   "name": "output-demo",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack --mode development --config webpack.amd.config.js",
+    "build": "webpack --mode development",
+    "build:amd": "webpack --mode development --config webpack.amd.config.js",
     "clean": "rimraf dist"
   },
   "dependencies": {
