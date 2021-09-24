@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path')
 
 module.exports = {
-  devtool: 'source-map',
+  devtool: 'cheap-module-source-map',
   module: {
     rules: [
       {
@@ -15,6 +15,12 @@ module.exports = {
         ],
       }
     ]
+  },
+  resolve: {
+    // alias: {
+    //   'systemjs': path.resolve(__dirname, './systemjs/src/system.js'),
+    //   'systemjs-extras-amd': path.resolve(__dirname, './systemjs/src/extras/amd.js'),
+    // }
   },
   plugins: [
     new HtmlWebpackPlugin({

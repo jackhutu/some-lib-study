@@ -1,11 +1,11 @@
+import 'systemjs'
+// import 'systemjs-extras-amd'
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter, Switch, Route } from 'react-router-dom';
-SystemJS.config({ transpiler: 'babel' })
-// http://127.0.0.1:8081/Level1-1-subApp-1.js
-SystemJS.import('./demo.js')
+
+window.System.import('./umd.js')
 .then((res)=>{
-  // const demo = res.default
   console.log(res)
 })
 
