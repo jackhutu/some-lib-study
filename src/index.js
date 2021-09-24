@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter, Switch, Route } from 'react-router-dom';
+import './index.less'
 
 function App() {
   return (
